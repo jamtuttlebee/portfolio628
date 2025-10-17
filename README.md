@@ -24,14 +24,14 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
   
 ### Repository structure
   The repository contains three folders:  
-    data:  
+    - data:  
       raw - contains the .xslx file as downloaded from Google forms.  
       processed - contains the cleaned up version of my data  
-    scripts:  
+    - scripts:  
       01_processing - contains a single script that reads the raw data and cleans it up  
       02_analyses -  
       03_contents -  
-    results:  
+    - results:  
       contains a folder where saved images will go   
       
 # About the data
@@ -39,27 +39,27 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
   
 ### clean_run_data contains 125 rows and 15 columns
   
-date - Numeric | date of the recorded workout (YYYY-MM-DD format)  
-activity_type - Character | type of recorded workout (Run, Walk, Weights, or Yoga)  
-distance - Numeric | total in miles for recorded workout  
-max_heart_rate - Numeric | max heart rate in beats per minute for recorded workout  
-active_time - Numeric | total moving time during recorded workout in seconds  
-average_speed - Numeric | average speed of recorded workout  
-elevation_gain - Numeric | elevation gain of recorded workout  
-max_cadence - Numeric | maximum cadence during recorded workout  
-average_cadence - Numeric | average cadence during recorded workout  
-average_heart_rate - Numeric | average heart rate in beats per minute for recorded workout  
-temperature - Numeric | average temperature in Cº during recorded workout  
-humidity - Numeric | average humidity during recorded workout  
-moon_phase - Numeric | moon phase during recorded workout with 1 being full moon and 0 being new moon  
-total_steps - Numeric | total steps taking during recorded workout  
-year - Numeric | year of recorded workout (2024 or 2025)  
+- date - Numeric | date of the recorded workout (YYYY-MM-DD format)  
+- activity_type - Character | type of recorded workout (Run, Walk, Weights, or Yoga)  
+- distance - Numeric | total in miles for recorded workout  
+- max_heart_rate - Numeric | max heart rate in beats per minute for recorded workout  
+- active_time - Numeric | total moving time during recorded workout in seconds  
+- average_speed - Numeric | average speed of recorded workout  
+- elevation_gain - Numeric | elevation gain of recorded workout  
+- max_cadence - Numeric | maximum cadence during recorded workout  
+- average_cadence - Numeric | average cadence during recorded workout  
+- average_heart_rate - Numeric | average heart rate in beats per minute for recorded workout  
+- temperature - Numeric | average temperature in Cº during recorded workout  
+- humidity - Numeric | average humidity during recorded workout  
+- moon_phase - Numeric | moon phase during recorded workout with 1 being full moon and 0 being new moon  
+- total_steps - Numeric | total steps taking during recorded workout  
+- year - Numeric | year of recorded workout (2024 or 2025)  
 
   
 ### table_1 (which is the smaller table with the beginnings of analyzing) contains 2 rows and 5 columns
     
-year - Numeric | year of recorded workout (2024 or 2025)  
-average_year_distance - Numeric | mean distance per workout by year  
-distance_year_total - Numeric | total distance by year  
-steps_year_total - Numeric | total steps taking by year  
-average_time_year - Numeric | mean active time per workout by year  
+- year - Numeric | year of recorded workout (2024 or 2025)  
+- average_year_distance - Numeric | mean distance per workout by year  
+- distance_year_total - Numeric | total distance by year  
+- steps_year_total - Numeric | total steps taking by year  
+- average_time_year - Numeric | mean active time per workout by year  
