@@ -25,7 +25,7 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
 ### Repository structure
   The repository contains three folders:  
     - data:  
-      raw - contains the .xslx file as downloaded from Google forms.  
+      raw - contains the .xslx file as downloaded from STRAVA account.  
       processed - contains the cleaned up version of my data  
     - scripts:  
       01_processing - contains a single script that reads the raw data and cleans it up  
