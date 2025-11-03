@@ -14,6 +14,11 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
   - library(janitor)  
   - library(readxl)  
   - library(lubridate)  
+  - library(ggplot2)
+  - library(dplyr)
+  - library(cowplot)
+  - library(patchwork)
+  - library(ggridges)
   
 ## Overview of data_processing.R
   This script serves the purpose to read in data from an excel document that was
@@ -30,9 +35,9 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
     - scripts:  
       01_processing - contains a single script that reads the raw data and cleans it up  
       02_analyses -  
-      03_contents -  
+      03_contents - contains a script that reads and visualizes the cleaned data
     - results:  
-      contains a folder where saved images will go   
+      contains a folder where saved images  
       
 # About the data
   data/raw/Mangie_Strava_Data/Raw_Run_Data.xlsx contains 154 rows and 99 columns
