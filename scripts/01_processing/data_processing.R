@@ -15,6 +15,7 @@ library(janitor)
 library(tidyverse)
 library(readxl)
 library(lubridate)
+library(writexl)
 ################################################################################
 # read in the data from raw data folder to tidy it
 ################################################################################
@@ -39,6 +40,8 @@ clean_run_data <- read_excel(path = "data/raw/Mangie_Strava_Data/Raw_Run_Data.xl
   filter(activity_type == "Run") # filter out any other types of workouts (walks, yoga, weights)
 
 view(clean_run_data)
+write_xlsx(clean_run_data, "data/processed/clean_run_data.xlsx")
+
 ################################################################################
 # create another, smaller table with some analyzed data
 ################################################################################
