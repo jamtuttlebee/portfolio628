@@ -46,9 +46,9 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
     - scripts:  
       01_processing - contains a single script that reads the raw data and cleans it up  
       02_analyses -  
-      03_contents - contains a script that reads and visualizes the cleaned data
+      03_contents - contains a script that reads and visualizes the cleaned data and another script that visulizes one of the routes from the cleaned data
     - results:  
-      contains a folder where saved images  
+      contains a folder where images are saved
       
 # About the data
   data/raw/Mangie_Strava_Data/Raw_Run_Data.xlsx contains 154 rows and 99 columns
