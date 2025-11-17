@@ -8,17 +8,28 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
 
 ## Packages and directories to install before using scripts in this Repo:
   - EVR628tools::create_dirs()  
-  - remotes::install_github("jcvdav/EVR628tools")  
+  - remotes::install_github("jcvdav/EVR628tools")
+  - remotes::install_github("grimbough/FITfileR")
+  - remotes::install_github("ropensci/rnaturalearthhires")
+  - library(FITfileR)
   - library(EVR628tools)  
   - library(tidyverse)  
   - library(janitor)  
   - library(readxl)  
   - library(lubridate)  
+  - library(stars)
+  - library(elevatr)
   - library(ggplot2)
   - library(dplyr)
   - library(cowplot)
   - library(patchwork)
   - library(ggridges)
+  - library(ggspatial)
+  - library(rnaturalearth)
+  - library(sf)
+  - library(terra)
+  - library(tidyterra)
+  - library(mapview)
   
 ## Overview of data_processing.R
   This script serves the purpose to read in data from an excel document that was
