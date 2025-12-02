@@ -79,3 +79,7 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
 - distance_year_total - Numeric | total distance by year  
 - steps_year_total - Numeric | total steps taking by year  
 - average_time_year - Numeric | mean active time per workout by year  
+
+#### Link to the quarto pdf document created to report on and describe the data and findings of this study
+
+<https://raw.githubusercontent.com/jamtuttlebee/portfolio628/refs/heads/main/final_report.qmd>
