@@ -83,3 +83,4 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
 #### Link to the quarto pdf document created to report on and describe the data and findings of this study
 
 <https://raw.githubusercontent.com/jamtuttlebee/portfolio628/refs/heads/main/final_report.qmd>
+<https://raw.githubusercontent.com/jamtuttlebee/portfolio628/refs/heads/main/final_report.html>
