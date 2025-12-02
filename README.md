@@ -82,6 +82,11 @@ jamtuttlebee@gmail.com | jlt225@miami.edu
 
 #### Link to the quarto pdf document created to report on and describe the data and findings of this study
 
+Link to qmd:
 <https://raw.githubusercontent.com/jamtuttlebee/portfolio628/refs/heads/main/final_report.qmd>
+
+Link to html:
 <https://raw.githubusercontent.com/jamtuttlebee/portfolio628/refs/heads/main/final_report.html>
+
+Link to local pdf:
 <http://localhost:5309/>
