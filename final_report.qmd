@@ -1,0 +1,88 @@
+---
+title: "Final Report of STRAVA Run Data"
+subtitle: "Maria Angelica Tuttlebee 2024-2025"
+author: "James Tuttlebee"
+institute: "Rosenstiel School of Marine, Atmospheric, and Earth Science"
+format: 
+  html:
+    toc: true
+    message: false
+    
+---
+
+# Introduction
+
+The STRAVA running, cycling, & hiking app has gained a lot of popularity in recent years as a way to track your exercise and activity and then to share it with your friends. The app pairs with your phone or your exercise tracking watch and then records all kinds of data about your activities.
+
+My wife, Maria, ran consistently throughout university, but took a break after graduating. While we were living and working at Academia los Pinares, a private bilingual school in Tegucigalpa, Honduras, she decided to begin running again. Starting with running a few laps around the school's campo (soccer field) a couple of times a week, she soon upgraded to using the STRAVA app and running a couple miles every other day. At the end of 2024 she decided to set a goal for herself: to run a marathon by the end of 2025. Using the app and the new gear she collected, she began to make strives toward her goal.
+
+The following document shows a breakdown of her running data from 2024 to 2025 through the STRAVA app as she makes her way to her goal of a full marathon.
+
+*This data only goes up until her half-marathon run, with her full marathon set to occur on December 7^th^*
+
+# Objective
+
+The objective of this repository and scripts therein are to read in the data from my wife's STRAVA recordings from an excel sheet in order to clean it and put it into a manageable sheet. The R scripts after the data cleaning have been written to analyze the data and visualize it into graphs and maps to better understand the data as a whole.
+
+# Data Sources
+
+All of my data comes from my wife's STRAVA app. Those data were recorded from her phone and then her Garmin watch part way through the recorded data.
+
+The raw STRAVA data contains 154 rows and 99 columns, and was cleaned down to 125 rows and 15 columns. Fourteen of those columns are **Numeric** variables and only one is a **Character**. Each row shows all of the recorded data from a single, dated, activity. All of the data are found in a single data set.
+
+My wife ran in several locations throughout the past two years, but her half-marathon (which was her longest run at the time the data was downloaded) was completed in the city of Chicago. Below is a spacial map of the route run, her pace, and moving time.
+
+![Spatial Data of half-marathon in Chicago, Illinois](results/img/half_marathon_pace.png){width=5.5in}
+
+# Data Processing
+
+To clean my raw data, I used the clean_names() function, and then selected out the columns that I wanted. There were numerous data points that I did not feel like I needed to include, either because they had not been recorded on most of the runs or because they were not necessary for what I wanted to analyze.
+
+The largest change I made to the actual data was the adjustment of the data column. It was originally a character variable and in a format that was not usable in an excel sheet. In the new, YYYY-MM-DD format, it works within graphs and R in general better.
+
+Also, I then made a smaller excel sheet with only the most wanted data including, the code for which can be seen below:
+
+ - the average distance for each run during each year run
+ - the total distance run during each year run
+ - the total steps taken during each year run
+ - the average moving time spent for each run during each year
+ 
+```{r}
+#| label: small table from clean data
+#| echo: true
+#| message: false
+#| warning: false
+#| code-fold: true
+# Load packages
+library(janitor)
+library(tidyverse)
+library(readxl)
+
+clean_run_data <- read_excel(path = "data/processed/clean_run_data.xlsx",
+                           sheet = 1,
+                           na = "NA")
+
+table_1 <- clean_run_data |>
+  group_by(year) |> # group the data by the two years
+  summarize(average_year_distance = mean(distance), # find the mean of distances run in each year
+              distance_year_total = sum(distance), # find the total miles ran in each year
+              steps_year_total = sum(total_steps), # find the total steps ran in each year
+              average_time_year = mean(active_time)) # find the mean active time in each year
+
+view(table_1)
+```
+
+
+# Main Findings
+
+The data recorded during my wife's runs could be analyzed a million different ways for a plethora of different things, but the tables and graphs made show us a nice overview of her running. It can be seen that her active time increases from 2024 to 2025 and her total steps and average distances both also increase into 2025. This can provide evidence to the fact that she has become a better runner in 2025 that she was in 2024. She has researched proper fueling and gear and has lengthened her average run substantially.
+
+![Analysis of Run Data between 2024 and 2025 - Distance per run and Comparing speed to total steps taken during each run](results/img/distance_speed_steps.png){width=5.5in}
+
+*Seeing her grow and improve as a runner and observing her confidence soar has been one of the greatest things as her husband. I am so very proud of what she has accomplished and can't wait to celebrate with her after her full marathon.*
+
+# References
+
+ - My wife's STRAVA app and her Garmin watch supplied all of the data used for this study.
+ - <https://msmith.de/FITfileR/articles/FITfileR.html> was used to read in the fit file taken from STRAVA.
+ - leaflet and mapview were used to visualize and find the Chicago map where her half-marathon was run.
